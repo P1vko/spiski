@@ -21,7 +21,10 @@ processingButton.addEventListener('click', () => {
     arr.forEach((item, i) => {
         if (i) {
             const line = item.split(`": `)[1].replace(/\s+/g,' ').replace('/', ' ').replace('|', ' ').replace('\\', ' ');
-            const fullLine = `${line.split(' ')[0].replace('/', '').trim()} / ${lineConstr(line)}`.replace(/\s+/g,' ');
+            let fullLine = `${line.split(' ')[0].replace('/', '').trim()} / ${lineConstr(line)}`.replace(/\s+/g,' ');
+            if (line.includes('===')) {
+                fullLine = line;
+            }
             const code = `<li class="output-item">${fullLine}</li>`;
             outputUl.insertAdjacentHTML('beforeEnd', code);
         }
