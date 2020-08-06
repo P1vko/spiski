@@ -2,8 +2,13 @@ body {
     font-family: Lato, 'sans-serif';
 }
 
+.h1 {
+    text-align: center;
+}
+
 .wrapper {
     display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -13,11 +18,18 @@ body {
 
 .textarea {
     height: 500px;
+    resize: vertical;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
+    width: 40%;
+}
+
+.output {
+    border: 1px solid #9c9b9b;
+    display: block;
     width: 40%;
 }
 
